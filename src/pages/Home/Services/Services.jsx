@@ -1,4 +1,5 @@
 // import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import UseServices from "../../../hooks/UseServices";
 import ServiceCard from "./ServiceCard";
 
@@ -28,6 +29,9 @@ const Services = () => {
                         services?.slice(0, 4).map((service) => <ServiceCard key={service._id} service={service}></ServiceCard>)
                     }
                 </div>
+            </div>
+            <div className="flex justify-center items-center my-10">
+                <Link to='/allservices'> <button className="btn hover:text-black bg-[#3065a2] text-white shadow-xl"> SHOW ALL SERVICE</button></Link>
             </div>
 
         </div>
