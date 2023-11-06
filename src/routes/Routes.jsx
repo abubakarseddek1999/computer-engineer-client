@@ -7,6 +7,7 @@ import CheckOut from "../pages/CheckOut/CheckOut";
 import Bookings from "../pages/Bookings/Bookings";
 import PrivetRoute from "./privetRoute";
 import NotFound from "../pages/Errorpage/NotFound";
+import AllServices from "../pages/All services/AllServices";
 
 
 const router = createBrowserRouter([
@@ -35,6 +36,11 @@ const router = createBrowserRouter([
         {
           path:'/bookings',
           element: <PrivetRoute><Bookings></Bookings></PrivetRoute>
+        },
+        {
+          path:'/allservices',
+          element: <AllServices></AllServices>
+
         }
         
       ]

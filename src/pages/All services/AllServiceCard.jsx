@@ -1,11 +1,9 @@
 /* eslint-disable react/prop-types */
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-const ServiceCard = ({service}) => {
-    // console.log(service);
+const AllServiceCard = ({service}) => {
     const {img,_id, title, price } = service;
-
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
             
@@ -27,4 +25,4 @@ const ServiceCard = ({service}) => {
     );
 };
 
-export default ServiceCard;
+export default AllServiceCard;

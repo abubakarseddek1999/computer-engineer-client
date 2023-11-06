@@ -2,7 +2,7 @@
 
 const Contact = () => {
     return (
-        <div className="flex p-10 bg-sky-800">
+        <div className="flex rounded p-10 bg-blue-900">
             <div className="w-3/4">
                 <h2 className="text-xl text-white text-center md:text-3xl lg:text-4xl font-bold">Do you have any question? <br /> Feel free to contact.</h2>
 
