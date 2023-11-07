@@ -1,12 +1,21 @@
 import { useContext } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
+import UseServices from "../../hooks/UseServices";
 
 
 
 const CheckOut = () => {
     const service = useLoaderData();
-    const { _id, title, price,img } = service;
+    const services = UseServices();
+
+    const { id } = useParams()
+    console.log(id);
+    const serviceItem = services.find(item => item._id === id)
+    console.log(serviceItem);
+
+    console.log(service);
+    const { _id, title, price, img } = service;
     const { user } = useContext(AuthContext)
     console.log(user);
 
@@ -30,7 +39,7 @@ const CheckOut = () => {
         console.log(booking);
 
 
-        fetch('http://localhost:5000/bookings',{
+        fetch('http://localhost:5000/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -38,13 +47,13 @@ const CheckOut = () => {
             },
             body: JSON.stringify(booking)
         })
-        .then(res => res.json())
-        .then(data =>{
-            console.log(data);
-            if(data.insertedId){
-                alert('services book success')
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    alert('services book success')
+                }
+            })
 
     }
 
@@ -52,7 +61,7 @@ const CheckOut = () => {
 
     return (
         <div className="border p-5 m-5">
-            <h2 className="text-center font-bold">Book Service: {title} </h2>
+            <h2 className="text-center font-bold">Book Service: {title || serviceItem?.title} </h2>
             <form onSubmit={handleBookService}>
 
                 <div className="m-5 md:flex gap-5  justify-center">
@@ -94,7 +103,7 @@ const CheckOut = () => {
                         </label>
                         <label className="input-group">
 
-                            <input type="text" name="taste" defaultValue={'$' + price} className="input input-bordered w-full" />
+                            <input type="text" name="taste" defaultValue={'$' + price || serviceItem?.price} className="input input-bordered w-full" />
                         </label>
                     </div>
                 </div>

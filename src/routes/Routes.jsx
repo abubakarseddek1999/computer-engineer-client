@@ -8,6 +8,7 @@ import Bookings from "../pages/Bookings/Bookings";
 import PrivetRoute from "./privetRoute";
 import NotFound from "../pages/Errorpage/NotFound";
 import AllServices from "../pages/All services/AllServices";
+import DetailsService from "../pages/DetailsService/DetailsService";
 
 
 const router = createBrowserRouter([
@@ -32,6 +33,11 @@ const router = createBrowserRouter([
           path:'/checkout/:id',
           element: <PrivetRoute><CheckOut> </CheckOut></PrivetRoute>,
           loader:({params})=> fetch(`http://localhost:5000/services/${params.id}`)
+        },
+        {
+          path:'/details/:id',
+          element: <PrivetRoute><DetailsService></DetailsService></PrivetRoute>,
+          // loader:({params})=> fetch(`http://localhost:5000/services/${params.id}`)
         },
         {
           path:'/bookings',
