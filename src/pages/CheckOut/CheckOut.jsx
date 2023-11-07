@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import UseServices from "../../hooks/UseServices";
+import Swal from "sweetalert";
 
 
 
@@ -56,7 +57,7 @@ const CheckOut = () => {
             .then(data => {
                 console.log(data);
                 if (data.insertedId) {
-                    alert('services Purchase success')
+                    Swal('services Purchase success')
                 }
             })
 
@@ -129,9 +130,9 @@ const CheckOut = () => {
                         </label>
                         <label className="input-group">
 
-                            <input type="text" name="price" defaultValue={'$'+  serviceItem?.price} className="input input-bordered w-full" readOnly />
+                            <input type="text" name="price" defaultValue={serviceItem?.price +'$'} className="input input-bordered w-full" readOnly />
                         </label>
-                    </div>
+                    </div> 
                 </div>
 
                 <div className="m-5 md:flex gap-5 justify-center">
