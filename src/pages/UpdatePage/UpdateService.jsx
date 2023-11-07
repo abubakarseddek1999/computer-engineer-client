@@ -62,9 +62,9 @@ const UpdateService = () => {
 
     }
     return (
-        <div className="p-10 border m-10 bg-stone-400 rounded-lg">
+        <div className="p-10 border m-10 bg-[#68809c] rounded-lg">
 
-            <h3 className="text-center text-xl md:text-2xl font-bold ">Update product</h3>
+            <h3 className="text-center text-xl md:text-2xl font-bold text-white ">Update product</h3>
 
             <form onSubmit={handleUpdateProduct}>
 
@@ -85,7 +85,7 @@ const UpdateService = () => {
                         </label>
                         <label className="input-group">
 
-                            <input type="text" name="price" defaultValue={serviceItem?.price +'$'} className="input input-bordered w-full" />
+                            <input type="text" name="price" defaultValue={serviceItem?.price} className="input input-bordered w-full" />
                         </label>
                     </div>
                 </div>

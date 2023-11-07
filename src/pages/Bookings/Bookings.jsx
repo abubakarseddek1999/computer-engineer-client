@@ -84,7 +84,7 @@ const Bookings = () => {
 
     return (
         <div className="border m-5 ">
-            <h2 className="text-center my-5"> <span className=" font-bold">Total Booking: </span>{bookings.length}</h2>
+            <h2 className="text-center my-5"> <span className=" font-bold">My Total Booking: </span>{bookings.length}</h2>
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}

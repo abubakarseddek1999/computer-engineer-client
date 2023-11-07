@@ -26,10 +26,10 @@ const ManageCard = ({ service, handleDelete }) => {
                 <p className="text-gray-500 font-bold text-sm mt-2">{service_provider?.
                     service_area
                 }</p>
-                <div>
-                    <Link to={`/update/${_id}`}> <button className="btn btn-block bg-[#3065a2] text-white hover:text-black"> Update</button></Link>
+                <div className="flex gap-5 mt-5">
+                    <Link to={`/update/${_id}`}> <button className="btn bg-[#3065a2] text-white hover:text-black"> Edit</button></Link>
 
-                    <button onClick={() => handleDelete(_id)} className="btn btn-block bg-[#3065a2] text-white hover:text-black"> Delete</button>
+                    <button onClick={() => handleDelete(_id)} className="btn bg-[#3065a2] text-white hover:text-black"> Delete</button>
                 </div>
 
             </div>

@@ -47,7 +47,7 @@ const NavBar = () => {
                             <ul className="p-2 shadow menu dropdown-content z-[1]  rounded-box w-52">
                                 <li><NavLink to="/bookings">My Bookings</NavLink></li>
                                 <li><NavLink to="/addService">Add Service</NavLink></li>
-                                <li><NavLink to="">My Service</NavLink></li>
+                                <li><NavLink to="/myService">My Service</NavLink></li>
                                
                             </ul>
                         </details>

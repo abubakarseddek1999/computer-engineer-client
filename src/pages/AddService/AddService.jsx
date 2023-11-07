@@ -6,6 +6,7 @@ import { AuthContext } from "../../provider/AuthProvider";
 
 const AddService = () => {
     const { user } = useContext(AuthContext);
+    const email =user?.email;
 
     const handleAddProduct = e => {
         e.preventDefault();
@@ -19,7 +20,7 @@ const AddService = () => {
 
 
         const img = form.serviceImage.value;
-        const newProduct = { title, price, description, img, service_provider: { name, image, service_area } }
+        const newProduct = { title, price, email, description, img, service_provider: { name, image, service_area } }
         console.log(newProduct);
 
         // send data to the server
@@ -46,9 +47,9 @@ const AddService = () => {
 
     }
     return (
-        <div className="p-10 border m-10 bg-stone-400 rounded-lg">
+        <div className="p-10 border m-10 bg-[#68809c] rounded-lg">
 
-            <h3 className="text-center text-xl md:text-2xl font-bold ">Add New product</h3>
+            <h3 className="text-center text-xl md:text-2xl font-bold  text-white">Add New product</h3>
 
             <form onSubmit={handleAddProduct}>
 
@@ -81,7 +82,7 @@ const AddService = () => {
                         </label>
                         <label className="input-group">
 
-                            <input type="text" name="providerName" placeholder="Supplier name" className="input input-bordered w-full" />
+                            <input type="text" name="providerName" placeholder="Provider name" className="input input-bordered w-full" />
                         </label>
                     </div>
 

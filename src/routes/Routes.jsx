@@ -12,6 +12,7 @@ import DetailsService from "../pages/DetailsService/DetailsService";
 import AddService from "../pages/AddService/AddService";
 import ManageService from "../pages/ManageService/ManageService";
 import UpdateService from "../pages/UpdatePage/UpdateService";
+import MyService from "../pages/MyService/MyService";
 
 
 const router = createBrowserRouter([
@@ -58,6 +59,11 @@ const router = createBrowserRouter([
       {
         path: '/manageService',
         element: <PrivetRoute><ManageService></ManageService></PrivetRoute>
+
+      },
+      {
+        path: '/myService',
+        element: <PrivetRoute><MyService></MyService></PrivetRoute>
 
       },
       {
