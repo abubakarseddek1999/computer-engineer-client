@@ -20,7 +20,7 @@ const AllServiceCard = ({ service }) => {
                 <p className="text-green-600 font-semibold text-lg mt-2">${price}</p>
                 <p className="text-gray-500 text-sm">{description}</p>
                 <div className="flex items-center mt-2">
-                    <img src={img} alt={title} className="w-8 h-8 rounded-full" />
+                    <img src={service_provider?.image} alt={title} className="w-8 h-8 rounded-full" />
                     <span className="ml-2 font-bold text-gray-600">{service_provider?.
                         name}</span>
                 </div>

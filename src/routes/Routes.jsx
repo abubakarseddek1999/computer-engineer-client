@@ -9,6 +9,7 @@ import PrivetRoute from "./privetRoute";
 import NotFound from "../pages/Errorpage/NotFound";
 import AllServices from "../pages/All services/AllServices";
 import DetailsService from "../pages/DetailsService/DetailsService";
+import AddService from "../pages/AddService/AddService";
 
 
 const router = createBrowserRouter([
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
         {
           path:'/bookings',
           element: <PrivetRoute><Bookings></Bookings></PrivetRoute>
+        },
+        {
+          path:'/addService',
+          element: <PrivetRoute><AddService></AddService></PrivetRoute>
         },
         {
           path:'/allservices',
