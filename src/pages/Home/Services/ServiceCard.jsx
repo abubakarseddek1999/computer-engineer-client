@@ -44,8 +44,8 @@ const ServiceCard = ({ service }) => {
                     service_area
                 }</p>
                 <div>
-                    <Link to ={`checkout/${_id}`}> <button className="btn btn-block bg-[#3065a2] text-white hover:text-black"> Book</button></Link>
-                    <Link to ={`details/${_id}`}> <button className="btn btn-block bg-[#3065a2] text-white hover:text-black"> DETAILS</button></Link>
+                    {/* <Link to ={`checkout/${_id}`}> <button className="btn btn-block bg-[#3065a2] text-white hover:text-black"> Book</button></Link> */}
+                    <Link to ={`details/${_id}`}> <button className="btn mt-2 btn-block bg-[#3065a2] text-white hover:text-black"> DETAILS</button></Link>
                 </div>
 
             </div>

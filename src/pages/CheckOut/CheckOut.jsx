@@ -15,23 +15,28 @@ const CheckOut = () => {
     console.log(serviceItem);
 
     console.log(service);
-    const { _id, title, price, img } = service;
+    const { _id, title, } = service;
     const { user } = useContext(AuthContext)
     console.log(user);
+    const price= serviceItem?.price;
+  
 
 
     const handleBookService = e => {
         e.preventDefault();
         const form = e.target;
-        const name = form.name.value;
         const date = form.date.value;
+        const serviceImage = form.serviceImage.value;
+        const userAddress = form.userAddress.value;
+        const serviceName = form.serviceName.value;
         const email = user?.email;
 
         const booking = {
-            customerName: name,
+            serviceName: serviceName,
+            userAddress,
             email,
             date,
-            img,
+            serviceImage,
             service: title,
             service_id: _id,
             price: price
@@ -51,7 +56,7 @@ const CheckOut = () => {
             .then(data => {
                 console.log(data);
                 if (data.insertedId) {
-                    alert('services book success')
+                    alert('services Purchase success')
                 }
             })
 
@@ -67,11 +72,11 @@ const CheckOut = () => {
                 <div className="m-5 md:flex gap-5  justify-center">
                     <div className="form-control md:w-1/2 ">
                         <label className="label">
-                            <span className="label-text font-bold"> Name</span>
+                            <span className="label-text font-bold">Service Name</span>
                         </label>
                         <label className="input-group">
 
-                            <input type="text" name="name" defaultValue={user?.displayName} className="input input-bordered w-full" />
+                            <input type="text" name="serviceName" defaultValue={serviceItem?.title} className="input input-bordered w-full" readOnly />
                         </label>
                     </div>
 
@@ -89,29 +94,63 @@ const CheckOut = () => {
                 <div className="m-5 md:flex gap-5 justify-center">
                     <div className="form-control md:w-1/2 ">
                         <label className="label">
-                            <span className="label-text font-bold"> Email</span>
+                            <span className="label-text font-bold">User Email</span>
                         </label>
                         <label className="input-group">
 
-                            <input type="email" name="email" defaultValue={user?.email} className="input input-bordered w-full" />
+                            <input type="email" name="email" defaultValue={user?.email} className="input input-bordered w-full" readOnly/>
                         </label>
                     </div>
 
                     <div className="form-control md:w-1/2">
                         <label className="label">
-                            <span className="label-text font-bold"> Due amount</span>
+                            <span className="label-text font-bold"> Service provider email</span>
                         </label>
                         <label className="input-group">
 
-                            <input type="text" name="taste" defaultValue={'$' + price || serviceItem?.price} className="input input-bordered w-full" />
+                            <input type="email" name="provider email" defaultValue={'......@gmail.com'} className="input input-bordered w-full" readOnly />
                         </label>
                     </div>
+                </div>
+                <div className="m-5 md:flex gap-5 justify-center">
+                    <div className="form-control md:w-1/2 ">
+                        <label className="label">
+                            <span className="label-text font-bold">User Address</span>
+                        </label>
+                        <label className="input-group">
+
+                            <input type="text" name="userAddress" placeholder="user address" className="input input-bordered w-full" />
+                        </label>
+                    </div>
+
+                    <div className="form-control md:w-1/2">
+                        <label className="label">
+                            <span className="label-text font-bold">Price</span>
+                        </label>
+                        <label className="input-group">
+
+                            <input type="text" name="price" defaultValue={'$'+  serviceItem?.price} className="input input-bordered w-full" readOnly />
+                        </label>
+                    </div>
+                </div>
+
+                <div className="m-5 md:flex gap-5 justify-center">
+                    <div className="form-control w-full ">
+                        <label className="label">
+                            <span className="label-text font-bold"> Service image</span>
+                        </label>
+                        <label className="input-group w-full">
+
+                            <input type="text" name="serviceImage" defaultValue={serviceItem?.img} className="input input-bordered w-full flex-1" readOnly />
+                        </label>
+                    </div>
+
                 </div>
 
 
                 <div className="m-5  gap-5 justify-center mb-5">
 
-                    <input type="submit" value="Order Confirm" className="btn text-white btn-block bg-[#ff3911ca]" />
+                    <input type="submit" value="Purchase" className="btn text-white btn-block bg-[#3065a2]" />
 
                 </div>
 
