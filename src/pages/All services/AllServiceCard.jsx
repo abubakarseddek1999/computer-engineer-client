@@ -1,9 +1,12 @@
 /* eslint-disable react/prop-types */
 
+import { Link } from "react-router-dom";
+
 // import { Link } from "react-router-dom";
 
 const AllServiceCard = ({ service }) => {
-    const { img, title, price, service_provider, description } = service;
+    const { img, title, price, _id, service_provider, description } = service;
+    console.log(service);
     return (
 
         <div className="card w-96 bg-base-100 shadow-xl">
@@ -25,7 +28,7 @@ const AllServiceCard = ({ service }) => {
                     service_area
                 }</p>
                 <div>
-                    <button className="btn btn-block bg-[#3065a2] text-white hover:text-black"> Details</button>
+                   <Link to={`/details/${_id}`}> <button className="btn btn-block bg-[#3065a2] text-white hover:text-black"> Details</button></Link>
                 </div>
 
             </div>
