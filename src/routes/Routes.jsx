@@ -10,52 +10,64 @@ import NotFound from "../pages/Errorpage/NotFound";
 import AllServices from "../pages/All services/AllServices";
 import DetailsService from "../pages/DetailsService/DetailsService";
 import AddService from "../pages/AddService/AddService";
+import ManageService from "../pages/ManageService/ManageService";
+import UpdateService from "../pages/UpdatePage/UpdateService";
 
 
 const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Main></Main>,
-      errorElement: <NotFound></NotFound>,
-      children:[
-        {
-            path:'/',
-            element: <Home></Home>
-        },
-        {
-          path:'/login',
-          element:<Login></Login>
-        },
-        {
-          path:'/signup',
-          element: <SignUp></SignUp>
-        },
-        {
-          path:'/checkout/:id',
-          element: <PrivetRoute><CheckOut> </CheckOut></PrivetRoute>,
-          loader:({params})=> fetch(`http://localhost:5000/services/${params.id}`)
-        },
-        {
-          path:'/details/:id',
-          element: <PrivetRoute><DetailsService></DetailsService></PrivetRoute>,
-          // loader:({params})=> fetch(`http://localhost:5000/services/${params.id}`)
-        },
-        {
-          path:'/bookings',
-          element: <PrivetRoute><Bookings></Bookings></PrivetRoute>
-        },
-        {
-          path:'/addService',
-          element: <PrivetRoute><AddService></AddService></PrivetRoute>
-        },
-        {
-          path:'/allservices',
-          element: <AllServices></AllServices>
+  {
+    path: "/",
+    element: <Main></Main>,
+    errorElement: <NotFound></NotFound>,
+    children: [
+      {
+        path: '/',
+        element: <Home></Home>
+      },
+      {
+        path: '/login',
+        element: <Login></Login>
+      },
+      {
+        path: '/signup',
+        element: <SignUp></SignUp>
+      },
+      {
+        path: '/checkout/:id',
+        element: <PrivetRoute><CheckOut> </CheckOut></PrivetRoute>,
+        loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+      },
+      {
+        path: '/details/:id',
+        element: <PrivetRoute><DetailsService></DetailsService></PrivetRoute>,
+        // loader:({params})=> fetch(`http://localhost:5000/services/${params.id}`)
+      },
+      {
+        path: '/bookings',
+        element: <PrivetRoute><Bookings></Bookings></PrivetRoute>
+      },
+      {
+        path: '/addService',
+        element: <PrivetRoute><AddService></AddService></PrivetRoute>
+      },
+      {
+        path: '/allservices',
+        element: <AllServices></AllServices>
 
-        }
-        
-      ]
-    },
-  ]);
+      },
+      {
+        path: '/manageService',
+        element: <PrivetRoute><ManageService></ManageService></PrivetRoute>
 
-  export default router;
+      },
+      {
+        path: '/update/:id',
+        element: <PrivetRoute><UpdateService></UpdateService></PrivetRoute>
+
+      }
+
+    ]
+  },
+]);
+
+export default router;
