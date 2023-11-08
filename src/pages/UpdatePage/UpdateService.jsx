@@ -13,7 +13,7 @@ const UpdateService = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://computer-engineer-server.vercel.app/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
@@ -38,7 +38,7 @@ const UpdateService = () => {
         console.log(newProduct);
 
         // send data to the server
-        fetch(`http://localhost:5000/services/${id}`, {
+        fetch(`https://computer-engineer-server.vercel.app/services/${id}`, {
             method:'PUT',
             headers: {
                 'content-type': 'application/json'

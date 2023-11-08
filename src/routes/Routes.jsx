@@ -36,12 +36,12 @@ const router = createBrowserRouter([
       {
         path: '/checkout/:id',
         element: <PrivetRoute><CheckOut> </CheckOut></PrivetRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+        loader: ({ params }) => fetch(`https://computer-engineer-server.vercel.app/services/${params.id}`)
       },
       {
         path: '/details/:id',
         element: <PrivetRoute><DetailsService></DetailsService></PrivetRoute>,
-        // loader:({params})=> fetch(`http://localhost:5000/services/${params.id}`)
+        // loader:({params})=> fetch(`https://computer-engineer-server.vercel.app/services/${params.id}`)
       },
       {
         path: '/bookings',
