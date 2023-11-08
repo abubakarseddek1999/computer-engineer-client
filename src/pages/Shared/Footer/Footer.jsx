@@ -6,7 +6,7 @@ const Footer = () => {
         <div>
             <footer className="footer p-10 bg-neutral text-neutral-content">
                 <aside>
-                    <img className="w-[100px] rounded" src="https://i.postimg.cc/wT4pPBjQ/22116270-1114.jpg" alt="" />
+                    <img className="w-[100px] rounded" src="https://i.postimg.cc/yYrqXwGy/158098322-initial-letter-logo-ab-company-name-blue-and-magenta-color-on-circle-and-swoosh-design-vec.png" alt="" />
 
                     <p className="font-bold">AB CENTER<br />Providing reliable tech since 2001</p>
                 </aside>

@@ -10,9 +10,11 @@ const Contact = () => {
 
             </div>
             <div className=" flex justify-center items-center w-1/4">
-                <button className="btn bg-slate-300 font-bold hover:shadow-lg hover:bg-slate-400"> CONTACT WITH US</button>
+                <button className="btn text-white font-bold hover:shadow-lg hover:bg-slate-300" style={{ background: 'linear-gradient(to right, #922d80, #0073e6)' }}>
+                    CONTACT WITH US
+                </button>
             </div>
-            
+
         </div>
     );
 };

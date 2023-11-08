@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import { Link } from "react-router-dom";
+import CountUp from 'react-countup';
 
 
 const ManageCard = ({ service, handleDelete }) => {
@@ -16,7 +17,11 @@ const ManageCard = ({ service, handleDelete }) => {
 
             <div className="p-5">
                 <h3 className="text-lg font-bold mt-2">{title}</h3>
-                <p className="text-green-600 font-semibold text-lg mt-2">${price}</p>
+                <p className="text-[#5350ff] font-semibold text-lg mt-2">
+                    $<CountUp end={price}
+                        duration={20}
+                    />
+                </p>
                 <p className="text-gray-500 text-sm">{description}</p>
                 <div className="flex items-center mt-2">
                     <img src={service_provider?.image} alt={title} className="w-8 h-8 rounded-full" />
@@ -30,6 +35,8 @@ const ManageCard = ({ service, handleDelete }) => {
                     <Link to={`/update/${_id}`}> <button className="btn bg-[#3065a2] text-white hover:text-black"> Edit</button></Link>
 
                     <button onClick={() => handleDelete(_id)} className="btn bg-[#3065a2] text-white hover:text-black"> Delete</button>
+
+                    {/* <Link to={`/details/${_id}`}> <button className="btn btn-block bg-[#3065a2] text-white hover:text-black"> Details</button></Link> */}
                 </div>
 
             </div>

@@ -74,10 +74,11 @@ const NavBar = () => {
                         {navLink}
                     </ul>
                 </div>
-                <div className='flex flex-col justify-center items-center'>
-                    <Link className="btn btn-ghost normal-case text-xl"><img className="w-[100px]" src="https://i.postimg.cc/wT4pPBjQ/22116270-1114.jpg" alt="" /></Link>
-                    <p className='text-xl font-bold'>AB center</p>
+                <div className='flex  justify-center items-center'>
+                   <img className="w-[100px]" src="https://i.postimg.cc/yYrqXwGy/158098322-initial-letter-logo-ab-company-name-blue-and-magenta-color-on-circle-and-swoosh-design-vec.png" alt="" />
+                   <p className='text-xl font-bold'>AB center</p>
                 </div>
+
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
