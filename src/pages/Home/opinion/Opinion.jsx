@@ -2,7 +2,7 @@
 
 const Opinion = () => {
     return (
-        <div className="m-24 shadow-sm ">
+        <div data-aos="zoom-in-right" className="m-24 bg-slate-100 shadow-sm ">
             <h2 className="text-xl text-center md:text-3xl lg:text-4xl font-bold">Customers Opinion</h2>
             
             <p className="text-center mt-5 mb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut laoreet orci tortor, <br /> sed dignissim urna ullamcorper sit amet.</p>

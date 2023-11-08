@@ -2,9 +2,9 @@
 // import img4 from '../../../assets/images/banner/4.jpg';
 const Banner = () => {
     return (
-        <div className="carousel w-full h-[600px]">
+        <div className="carousel w-full  h-[600px]">
 
-            <div id="slide1" className="carousel-item relative w-full">
+            <div id="slide1" className="carousel-item  relative w-full">
                 <img src="https://i.postimg.cc/dV6gD23Y/14727a93d1f9b33211a72c609f9323e8.jpg" className="w-full rounded-xl" />
 
                 <div className="absolute rounded-xl h-full left-0 top-0  flex items-center  gap-5  bottom-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)]">

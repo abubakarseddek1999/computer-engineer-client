@@ -5,7 +5,7 @@ import NavBar from "../pages/Shared/navBar/NavBar";
 
 const Main = () => {
     return (
-        <div>
+        <div className="bg-slate-200">
             <NavBar></NavBar>
             <Outlet></Outlet>
             <Footer></Footer>

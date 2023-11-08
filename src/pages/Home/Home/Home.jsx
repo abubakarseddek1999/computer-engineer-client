@@ -8,7 +8,7 @@ import WorkShop from "../workshop/WorkShop";
 
 const Home = () => {
     return (
-        <div>
+        <div className="bg-slate-200">
            <Banner></Banner>
            <Services></Services>
            <WorkShop></WorkShop>
