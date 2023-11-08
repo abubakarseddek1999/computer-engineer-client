@@ -12,10 +12,10 @@ Project Overview:
   Service providers can add their services to the platform. They can also manage their services, edit their details, and update service statuses based on user interactions.
 
 - Technologies Used: 
-        Front-End Framework: React
-        User Authentication: Firebase Authentication
-        Styling: Tailwind CSS
-        API Requests: Axios 
+        Front-End Framework: React.
+        User Authentication: Firebase Authentication.
+        Styling: Tailwind CSS.
+        API Requests: Axios. 
 
 
 - my client side Live Link:-

@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-
+import { motion } from "framer-motion"
 import { Link } from 'react-router-dom';
 
 const ServiceCard = ({ service }) => {
@@ -25,9 +25,17 @@ const ServiceCard = ({ service }) => {
         //         </div>
         //     </div>
         // </div>
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <motion.div initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+                duration: 0.8,
+                delay: 0.5,
+                ease: [0, 0.71, 0.2, 1.01]
+            }} className="card w-96 bg-base-100 shadow-xl">
 
-            <figure className="px-10 pt-10">
+            <figure data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000"  className="px-10 pt-10">
                 <img src={img} alt="Shoes" placeholder='image' className="rounded-xl" />
             </figure>
 
@@ -45,11 +53,11 @@ const ServiceCard = ({ service }) => {
                 }</p>
                 <div>
                     {/* <Link to ={`checkout/${_id}`}> <button className="btn btn-block bg-[#3065a2] text-white hover:text-black"> Book</button></Link> */}
-                    <Link to ={`details/${_id}`}> <button className="btn mt-2 btn-block bg-[#3065a2] text-white hover:text-black"> DETAILS</button></Link>
+                    <Link to={`details/${_id}`}> <button className="btn mt-2 btn-block bg-[#3065a2] text-white hover:text-black"> DETAILS</button></Link>
                 </div>
 
             </div>
-        </div>
+        </motion.div >
     );
 };
 
