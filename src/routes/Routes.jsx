@@ -13,6 +13,7 @@ import AddService from "../pages/AddService/AddService";
 import ManageService from "../pages/ManageService/ManageService";
 import UpdateService from "../pages/UpdatePage/UpdateService";
 import MyService from "../pages/MyService/MyService";
+import Contact from "../pages/Contact/Contact";
 
 
 const router = createBrowserRouter([
@@ -54,6 +55,11 @@ const router = createBrowserRouter([
       {
         path: '/allservices',
         element: <AllServices></AllServices>
+
+      },
+      {
+        path: '/contact',
+        element: <Contact></Contact>
 
       },
       {
